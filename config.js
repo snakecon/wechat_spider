@@ -72,9 +72,9 @@ const config = {
 
       // 是否保存微信文章内容
       // 内容占用很多空间，尤其是html形式
-      isSavePostContent: false,
+      isSavePostContent: true,
       // 保存内容的形式: html/text
-      saveContentType: 'text',
+      saveContentType: 'html',
     },
 
     // 公众号查看全部历史文章页面相关设置

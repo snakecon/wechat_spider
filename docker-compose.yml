@@ -20,5 +20,13 @@ services:
       - mongo
   redis:
     image: redis:alpine
+    expose:
+      - "6379"
+    ports:
+      - 6379:6379
   mongo:
     image: mongo:3.6
+    expose:
+      - "27017"
+    ports:
+      - 27017:27017
