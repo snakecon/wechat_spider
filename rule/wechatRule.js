@@ -30,9 +30,13 @@ const getReadAndLikeNum = async function(ctx) {
 
   try {
     const body = res.response.body.toString();
+    // debug('================================');
+    // debug(body);
+    // debug('================================');
     const data = JSON.parse(body);
-    const { read_num, like_num } = data.appmsgstat;
-    const [readNum, likeNum] = [read_num, like_num];
+    // const { read_num, like_num } = data.appmsgstat;
+    // const [readNum, likeNum] = [read_num, like_num];
+    const [readNum, likeNum] = [0, 0];
 
     const { requestData } = req;
     const reqData = String(requestData);
@@ -138,7 +142,7 @@ const getPostBasicInfo = async function(ctx) {
     const $ = cheerio.load(body, { decodeEntities: false });
     let content;
     if (pageConfig.saveContentType === 'html') {
-      content = $('#js_content').html() || '';
+      content = $('html').html() || '';
     } else {
       content = $('#js_content').text() || '';
     }

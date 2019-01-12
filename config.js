@@ -51,7 +51,7 @@ const config = {
     page: {
       // 是否关闭自动跳转页面的功能
       // 跳转指文章页跳至下一个文章页，不能文章页和公众号历史页互相跳转
-      disable: false,
+      disable: true,
       // 跳转时间间隔，单位秒
       jumpInterval: 2,
 
@@ -81,7 +81,7 @@ const config = {
     profile: {
       // 是否关闭自动跳转页面的功能
       // 跳转不能文章页和公众号历史页互相跳转
-      disable: false,
+      disable: true,
       // 跳转时间间隔，单位秒
       jumpInterval: 5,
 
@@ -99,10 +99,10 @@ const config = {
     },
 
     // 功能：是否抓取评论
-    isCrawlComments: true,
+    isCrawlComments: false,
 
     // 优化项：是否替换掉所有的图片请求
-    isReplaceImg: false,
+    isReplaceImg: true,
     // 优化项：是否替换手机上显示的正文内容
     isReplacePostBody: false,
   },

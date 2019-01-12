@@ -1,0 +1,57 @@
+TAB T=1
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*200 + 11); randomNumber;")
+WAIT SECONDS={{!VAR1}}
+
+TAB CLOSE
+WAIT SECONDS=2
+
+
+TAB T=2
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 13); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
+TAB CLOSE
+WAIT SECONDS=2
+
+
+TAB T=3
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 13); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
+TAB CLOSE
+WAIT SECONDS=2
+
+
+TAB T=4
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 13); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
+TAB CLOSE
+WAIT SECONDS=2
+
+
+TAB T=5
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 13); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
+TAB CLOSE
+WAIT SECONDS=2
+
+
+TAB T=6
+TAG POS={{!LOOP}} TYPE=A ATTR=CLASS:ellipsis
+
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 13); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
+TAB CLOSE

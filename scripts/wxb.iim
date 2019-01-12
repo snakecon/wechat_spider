@@ -1,0 +1,23 @@
+WAIT SECONDS=2
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child(1) > div:nth-child(1) > a"
+
+SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*20 + 3); randomNumber;")
+WAIT SECONDS={{!VAR1}}
+
+TAB CLOSE
+
+WAIT SECONDS=2
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child(30) > div:nth-child(1) > a"
+
+SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*200 + 3); randomNumber;")
+WAIT SECONDS={{!VAR1}}
+
+TAB CLOSE
+
+
+TAB T=1
+WAIT SECONDS=2
+TAG SELECTOR="#paginationMain > ul > li > a.next"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*2 + 2); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+
