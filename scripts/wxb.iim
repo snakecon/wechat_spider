@@ -1,23 +1,60 @@
-WAIT SECONDS=2
-TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child(1) > div:nth-child(1) > a"
-
-SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*20 + 3); randomNumber;")
-WAIT SECONDS={{!VAR1}}
-
-TAB CLOSE
-
-WAIT SECONDS=2
-TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child(30) > div:nth-child(1) > a"
-
-SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*200 + 3); randomNumber;")
-WAIT SECONDS={{!VAR1}}
-
-TAB CLOSE
-
-
-TAB T=1
-WAIT SECONDS=2
-TAG SELECTOR="#paginationMain > ul > li > a.next"
-SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*2 + 2); randomNumber;")
+SET !VAR3 EVAL("var number=({{!LOOP}} - 1) * 5 + 1; number;")
+SET !VAR1 EVAL("var pageNumber=Math.floor({{!VAR3}}%30) + 1; pageNumber;")
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child({{!VAR1}}) > div:nth-child(1) > a"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 100); randomNumber;")
 WAIT SECONDS={{!VAR2}}
+TAB CLOSE
 
+SET !VAR1 EVAL("var pageclass=Math.floor({{!VAR3}}%30) == 0 ? '.next' : ''; pageclass;")
+SET !VAR2 EVAL("var nextclass=Math.floor({{!VAR3}}%30) != 0 ? '.active' : ''; nextclass;")
+TAG SELECTOR="#paginationMain > ul > li{{!VAR2}} > a{{!VAR1}}"
+WAIT SECONDS=5
+
+SET !VAR3 EVAL("var number=({{!LOOP}} - 1)  * 5 + 2; number;")
+SET !VAR1 EVAL("var pageNumber=Math.floor({{!VAR3}}%30) + 1; pageNumber;")
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child({{!VAR1}}) > div:nth-child(1) > a"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 100); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+TAB CLOSE
+
+SET !VAR1 EVAL("var pageclass=Math.floor({{!VAR3}}%30) == 0 ? '.next' : ''; pageclass;")
+SET !VAR2 EVAL("var nextclass=Math.floor({{!VAR3}}%30) != 0 ? '.active' : ''; nextclass;")
+TAG SELECTOR="#paginationMain > ul > li{{!VAR2}} > a{{!VAR1}}"
+WAIT SECONDS=5
+
+SET !VAR3 EVAL("var number=({{!LOOP}} - 1)  * 5 + 3; number;")
+SET !VAR1 EVAL("var pageNumber=Math.floor({{!VAR3}}%30) + 1; pageNumber;")
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child({{!VAR1}}) > div:nth-child(1) > a"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 100); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+TAB CLOSE
+
+SET !VAR1 EVAL("var pageclass=Math.floor({{!VAR3}}%30) == 0 ? '.next' : ''; pageclass;")
+SET !VAR2 EVAL("var nextclass=Math.floor({{!VAR3}}%30) != 0 ? '.active' : ''; nextclass;")
+TAG SELECTOR="#paginationMain > ul > li{{!VAR2}} > a{{!VAR1}}"
+WAIT SECONDS=5
+
+SET !VAR3 EVAL("var number=({{!LOOP}} - 1)  * 5 + 4; number;")
+SET !VAR1 EVAL("var pageNumber=Math.floor({{!VAR3}}%30) + 1; pageNumber;")
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child({{!VAR1}}) > div:nth-child(1) > a"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 100); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+TAB CLOSE
+
+SET !VAR1 EVAL("var pageclass=Math.floor({{!VAR3}}%30) == 0 ? '.next' : ''; pageclass;")
+SET !VAR2 EVAL("var nextclass=Math.floor({{!VAR3}}%30) != 0 ? '.active' : ''; nextclass;")
+TAG SELECTOR="#paginationMain > ul > li{{!VAR2}} > a{{!VAR1}}"
+WAIT SECONDS=5
+
+
+SET !VAR3 EVAL("var number=({{!LOOP}} - 1)  * 5 + 5; number;")
+SET !VAR1 EVAL("var pageNumber=Math.floor({{!VAR3}}%30) + 1; pageNumber;")
+TAG SELECTOR="#app > div.app-container > div.followManageAdded > div.rightItem > div.articlesMainTable > div.articlesTable > div > div > div:nth-child({{!VAR1}}) > div:nth-child(1) > a"
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*200 + 100); randomNumber;")
+WAIT SECONDS={{!VAR2}}
+TAB CLOSE
+
+SET !VAR1 EVAL("var pageclass=Math.floor({{!VAR3}}%30) == 0 ? '.next' : ''; pageclass;")
+SET !VAR2 EVAL("var nextclass=Math.floor({{!VAR3}}%30) != 0 ? '.active' : ''; nextclass;")
+TAG SELECTOR="#paginationMain > ul > li{{!VAR2}} > a{{!VAR1}}"
+WAIT SECONDS=5
